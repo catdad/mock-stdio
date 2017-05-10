@@ -6,17 +6,17 @@ var lib = require('../');
 
 describe('[index]', function () {
   it('has two methods', function () {
-    expect(lib).to.have.all.keys(['activate', 'deactivate']);
+    expect(lib).to.have.all.keys(['start', 'end']);
   });
 
   it('collects stdout data from process.stdout stream', function () {
     var str = 'banana';
 
-    lib.activate();
+    lib.start();
 
     process.stdout.write(str);
 
-    var data = lib.deactivate();
+    var data = lib.end();
 
     expect(data.stdout).to.equal(str);
   });
@@ -24,11 +24,11 @@ describe('[index]', function () {
   it('collects stdout data from console.log', function () {
     var str = 'banana';
 
-    lib.activate();
+    lib.start();
 
     console.log(str);
 
-    var data = lib.deactivate();
+    var data = lib.end();
 
     expect(data.stdout).to.equal(str + '\n');
   });
@@ -36,11 +36,11 @@ describe('[index]', function () {
   it('collects stderr data from process.stderr stream', function () {
     var str = 'banana';
 
-    lib.activate();
+    lib.start();
 
     process.stderr.write(str);
 
-    var data = lib.deactivate();
+    var data = lib.end();
 
     expect(data.stderr).to.equal(str);
   });
@@ -48,11 +48,11 @@ describe('[index]', function () {
   it('collects stdout data from console.error', function () {
     var str = 'banana';
 
-    lib.activate();
+    lib.start();
 
     console.error(str);
 
-    var data = lib.deactivate();
+    var data = lib.end();
 
     expect(data.stderr).to.equal(str + '\n');
   });

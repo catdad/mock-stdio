@@ -13,11 +13,11 @@ function collect(arr) {
 }
 
 module.exports = {
-  activate: function () {
+  start: function () {
     process.stdout.write = collect(outData);
     process.stderr.write = collect(errData);
   },
-  deactivate: function () {
+  end: function () {
     process.stdout.write = originalStdout;
     process.stderr.write = originalStderr;
 
