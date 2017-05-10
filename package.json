@@ -1,7 +1,7 @@
 {
   "name": "mock-stdio",
   "version": "1.0.0",
-  "description": "",
+  "description": "mock stdio output for tests",
   "main": "index.js",
   "scripts": {
     "test": "nyc mocha"
@@ -10,13 +10,13 @@
     "type": "git",
     "url": "git+https://github.com/catdad/mock-stdio.git"
   },
-  "keywords": [],
   "author": "Kiril Vatev <vatev.1@gmail.com>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/catdad/mock-stdio/issues"
   },
   "homepage": "https://github.com/catdad/mock-stdio#readme",
+  "dependencies": {},
   "devDependencies": {
     "chai": "^3.5.0",
     "codeclimate-test-reporter": "^0.4.1",
@@ -33,5 +33,18 @@
       "lcov",
       "text"
     ]
-  }
+  },
+  "directories": {
+    "test": "test"
+  },
+  "keywords": [
+    "mock",
+    "stdio",
+    "stdout",
+    "stderr",
+    "console.log",
+    "console.error",
+    "console",
+    "log"
+  ]
 }
