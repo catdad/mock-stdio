@@ -22,5 +22,12 @@
     "codeclimate-test-reporter": "^0.4.1",
     "mocha": "^3.3.0",
     "nyc": "^10.3.2"
+  },
+  "nyc": {
+    "check-coverage": true,
+    "lines": 100,
+    "statements": 100,
+    "functions": 100,
+    "branches": 100
   }
 }
