@@ -1,7 +1,6 @@
 # mock-stdio
 
 [![travis][travis.svg]][travis.link]
-[![appveyor][appveyor.svg]][appveyor.link]
 [![cov-codeclimate][cov-codeclimate.svg]][cov-codeclimate.link]
 [![gpa-codeclimate][gpa-codeclimate.svg]][gpa-codeclimate.link]
 [![npm-downloads][npm-downloads.svg]][npm.link]
@@ -10,8 +9,6 @@
 
 [travis.svg]: https://travis-ci.org/catdad/mock-stdio.svg?branch=master
 [travis.link]: https://travis-ci.org/catdad/mock-stdio
-[appveyor.svg]: https://ci.appveyor.com/api/projects/status/github/catdad/mock-stdio?branch=master&svg=true
-[appveyor.link]: https://ci.appveyor.com/project/catdad/mock-stdio
 [cov-codeclimate.svg]: https://codeclimate.com/github/catdad/mock-stdio/badges/coverage.svg
 [cov-codeclimate.link]: https://codeclimate.com/github/catdad/mock-stdio/coverage
 [gpa-codeclimate.svg]: https://codeclimate.com/github/catdad/mock-stdio/badges/gpa.svg
