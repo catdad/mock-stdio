@@ -35,3 +35,4 @@ Temporary Items
 # Node stuff
 node_modules/
 coverage/
+.nyc/
