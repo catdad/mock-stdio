@@ -18,3 +18,12 @@ addons:
 
 after_script:
   - codeclimate-test-reporter < coverage/lcov.info
+
+deploy:
+  provider: npm
+  email: vatev.1+npm@gmail.com
+  api_key:
+    secure: UIw2aGEou6QGSyw+0A99n5p0YjwDvvCcOMgiWpf6lTDl0lpLefG9zVu3F9ALCW/LrQ8y5sK9oX4oColAb5dyTp2RS4EmSxVDUfxHWgZfOTQSX4V6cSD9N9bJCOZaZEqpPx2jmia56vyUs25jmcchMTzIW3WehKCQxMhg4U87fx3Qz/21qRDhNbe/SJ+viXKAZuXjqjm7agYObbBNVhvZJYkrD7WrdnzgIu6t3Fp1J01Ph5yD1AQfk/MKvFc/Q7OxqdLyGKCYGk1GGOT6+cdioa8GqeYCfnvHyimZlK/vdt2kE2MkzIO4PLpickLO5cZctUaZSJlHytqKjm6jpDxcfulSoI1YQAXzMu2SXfyoRypeJcW+CT/5KBgpZBf49e7rMQCyuqVokX3EFdikA/EhGhfQZbCLISdVrkA7q3WYcJpW5PAUl90FFcCyOS6+UOycDzXyXK2+Hz1QIJ65AoHfwr3oQ1Xoh4Qy/X6WMb3FgkpNP5Tz5K7LYk5ODkCL3b+0UqA+acik2IH/bkx8Cq5grcqkktTRqQZnVTHkrysyTSMdgVHWxqqLTUHRpGH+AYkWtlVznVu37WPLm/+MNL9x5ThUA64OVIJZz6AOkCIjxZBpzEnyPAi6i0Cc3hozb8OFLh75BYnBl2UIZw6oHJBHVH7vYEKDceUXMo+A5fwjHxg=
+  on:
+    tags: true
+    repo: catdad/mock-stdio
