@@ -37,4 +37,5 @@ node_modules/
 coverage/
 .nyc_output/
 
+# ignore the dotfiles
 .*
