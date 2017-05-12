@@ -18,3 +18,35 @@
 [npm-version.svg]: https://img.shields.io/npm/v/mock-stdio.svg
 [dm-david.svg]: https://david-dm.org/catdad/mock-stdio.svg
 [dm-david.link]: https://david-dm.org/catdad/mock-stdio
+
+This is just a simple module allowing you to easiy test (or just ignore) code that needs to `console.log` or otherwise write to standard out and standard error.
+
+## Example
+
+```javascript
+var expect = require('chai').expect;
+var mockIo = require('mock-stdio');
+
+describe('thing', function () {
+  it('writes to standard out', function () {
+    // Start the mock... it will not be possible to write to
+    // the real stdout and stderr when this is active.
+    mockIo.start();
+
+    // Call your code.
+    someFunction();
+
+    // When you are done, end the mock, and it will return
+    // all the data written to stdout and stderr while the mock
+    // was active.
+    var result = mockIo.end();
+
+    // Make sure that what you expected was written to
+    // the corresponding output.
+    expect(result.stdout).to.be.a('string');
+    expect(result.stderr).to.be.a('string');
+  });
+});
+```
+
+Note that is is best to use the mock directly inside the test, rather than in `before` or `after` functions, as it will not be possible for anything within the node process to log to `stdout` and `stderr`, meaning you may lose messages that are printed by your test framework.
