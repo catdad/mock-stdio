@@ -21,6 +21,12 @@
 
 This is just a simple module allowing you to easiy test (or just ignore) code that needs to `console.log` or otherwise write to standard out and standard error.
 
+## Install
+
+```bash
+npm install --save-dev mock-stdio
+```
+
 ## Example
 
 ```javascript
