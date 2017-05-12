@@ -24,8 +24,8 @@ This is just a simple module allowing you to easiy test (or just ignore) code th
 ## Example
 
 ```javascript
-var expect = require('chai').expect;
 var mockIo = require('mock-stdio');
+var expect = require('chai').expect;
 
 describe('thing', function () {
   it('writes to standard out', function () {
