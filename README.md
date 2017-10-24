@@ -19,7 +19,7 @@
 [dm-david.svg]: https://david-dm.org/catdad/mock-stdio.svg
 [dm-david.link]: https://david-dm.org/catdad/mock-stdio
 
-This is just a simple module allowing you to easiy test (or just ignore) code that needs to `console.log` or otherwise write to standard out and standard error.
+This is just a simple module allowing you to easily test (or just ignore) code that needs to `console.log` or otherwise write to standard out and standard error.
 
 ## Install
 
@@ -55,4 +55,4 @@ describe('thing', function () {
 });
 ```
 
-Note that is is best to use the mock directly inside the test, rather than in `before` or `after` functions, as it will not be possible for anything within the node process to log to `stdout` and `stderr`, meaning you may lose messages that are printed by your test framework.
+Note that it is best to use the mock directly inside the test, rather than in `before` or `after` functions, as it will not be possible for anything within the node process to log to `stdout` and `stderr`, meaning you may lose messages that are printed by your test framework.
