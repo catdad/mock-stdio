@@ -1,6 +1,6 @@
 {
   "name": "mock-stdio",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "mock stdio output for tests",
   "main": "index.js",
   "scripts": {
