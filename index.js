@@ -8,7 +8,12 @@ var errData = [];
 
 function collect(arr) {
   return function (val) {
-    arr.push(new Buffer(val));
+    /* istanbul ignore next */
+    if (Buffer.from) {
+      arr.push(Buffer.from(val));
+    } else {
+      arr.push(new Buffer(val));
+    }
   };
 }
 
