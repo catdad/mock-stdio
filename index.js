@@ -9,9 +9,16 @@ var errData = [];
 function collect(arr) {
   return function (val) {
     /* istanbul ignore next */
-    if (Buffer.from) {
+    try {
+      // Buffer.from was officially introduced
+      // in node 4.5.0, but was actually present
+      // with only partial abilities before that.
+      // In earlier versions of node 4, it could
+      // not handle string data. Simply testing
+      // for the existence of Buffer.from does not
+      // support all versions of node.
       arr.push(Buffer.from(val));
-    } else {
+    } catch(e) {
       arr.push(new Buffer(val));
     }
   };
